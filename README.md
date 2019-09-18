@@ -9,3 +9,15 @@ https://ru.wikipedia.org/wiki/Composer
 
 В ArchLinux Composer можно установить через pacman:
 `pacman -Syu composer`
+
+## Основы
+
+Создаём файл `composer.json` с содержимым:
+`{
+    "require": {
+        "monolog/monolog": "1.0.*"
+    }
+}`
+затем выполняем команду `composer install`
+
+Полученный `composer.lock` нужно добавить в репозиторий, а папки с библиотеками в `.gitignore`
