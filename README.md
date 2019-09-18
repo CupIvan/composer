@@ -13,7 +13,7 @@ https://ru.wikipedia.org/wiki/Composer
 ## Основы
 
 Создаём файл `composer.json` с содержимым:
-```javascipt
+```json
 {
     "require": {
         "monolog/monolog": "1.0.*"
@@ -35,3 +35,19 @@ $log = new Monolog\Logger('name');
 ## Библиотеки
 
 Основной источник библиотек — сайт https://packagist.org
+
+## Подключение библиотеки с github
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/username/hello-world"
+        }
+    ],
+    "require": {
+        "acme/hello-world": "dev-master"
+    }
+}
+```
