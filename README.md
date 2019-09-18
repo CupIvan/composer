@@ -13,11 +13,25 @@ https://ru.wikipedia.org/wiki/Composer
 ## Основы
 
 Создаём файл `composer.json` с содержимым:
-`{
+```javascipt
+{
     "require": {
         "monolog/monolog": "1.0.*"
     }
-}`
+}
+```
 затем выполняем команду `composer install`
 
 Полученный `composer.lock` нужно добавить в репозиторий, а папки с библиотеками в `.gitignore`
+
+Подключить библиотеки достаточно просто:
+```php
+require __DIR__ . '/vendor/autoload.php';
+$log = new Monolog\Logger('name');
+```
+
+Чтобы обновить библиотеки есть команда `composer update`, при этом также обновится файл `composer.lock`
+
+## Библиотеки
+
+Основной источник библиотек — сайт https://packagist.org
